@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>pyvnc</title>
+  <link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+  <div id="bar">
+    <span id="dot"></span>
+    <span id="status">starting…</span>
+    <span id="name"></span>
+    <span class="spacer"></span>
+    <button id="btn-cad" title="Send Ctrl+Alt+Del to the remote">Ctrl+Alt+Del</button>
+    <button id="btn-clip" title="Paste local clipboard into the remote">Paste to remote</button>
+    <button id="btn-fs" title="Toggle fullscreen">Fullscreen</button>
+    <button id="btn-reconnect" title="Drop and re-establish the connection">Reconnect</button>
+    <button id="btn-disconnect" title="Disconnect (stop auto-reconnect)">Disconnect</button>
+    <button id="btn-opts" title="Open extension settings">Settings</button>
+  </div>
+  <div id="wrap" class="fit">
+    <div id="screen"></div>
+    <canvas id="snapshot" hidden></canvas>
+    <div id="overlay" hidden><div id="overlay-text"></div></div>
+    <div id="toast" hidden></div>
+    <form id="prompt" hidden>
+      <label for="prompt-pw">VNC password</label>
+      <input type="password" id="prompt-pw" autocomplete="off">
+      <button type="submit">Connect</button>
+      <button type="button" id="prompt-cancel">Cancel</button>
+    </form>
+  </div>
+  <textarea id="clipstash" aria-hidden="true"></textarea>
+  <script src="boot.js"></script>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>
