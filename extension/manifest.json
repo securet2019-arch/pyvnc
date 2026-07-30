@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "pyvnc Web Viewer",
+  "version": "0.1.0",
+  "description": "Watch the headless WSJT-X machine over VNC (noVNC core + websockify bridge).",
+  "permissions": ["storage", "clipboardWrite"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Open VNC viewer" },
+  "options_page": "options.html"
+}

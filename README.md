@@ -101,3 +101,4 @@ checks the connection-resilience behavior:
 | `vncviewer.py` | the whole viewer (protocol + UI) |
 | `test_vncviewer.py` | fake-server resilience tests |
 | `test_capture.png` | screenshot of a live session |
+| `extension/` | Chrome extension version (noVNC core + websockify bridge) — see `extension/README.md` |
